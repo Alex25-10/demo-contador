@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contadora en Línea - Contabilidad Simple para Monotributistas y Pymes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "outline": "#76777d",
+                        "surface-dim": "#cbdbf5",
+                        "secondary-fixed-dim": "#4ae176",
+                        "surface": "#f8f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary-container": "#007432",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#002109",
+                        "surface-tint": "#565e74",
+                        "primary-container": "#131b2e",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#d3e4fe",
+                        "surface-bright": "#f8f9ff",
+                        "secondary": "#006e2f",
+                        "on-surface": "#0b1c30",
+                        "inverse-surface": "#213145",
+                        "inverse-primary": "#bec6e0",
+                        "on-background": "#0b1c30",
+                        "on-surface-variant": "#45464d",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-container-high": "#dce9ff",
+                        "on-tertiary-fixed": "#001a42",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#6bff8f",
+                        "on-primary-fixed": "#131b2e",
+                        "on-primary-container": "#7c839b",
+                        "primary-fixed": "#dae2fd",
+                        "tertiary-container": "#001a42",
+                        "primary": "#000000",
+                        "on-secondary-fixed-variant": "#005321",
+                        "background": "#f8f9ff",
+                        "outline-variant": "#c6c6cd",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#3980f4",
+                        "tertiary": "#000000",
+                        "primary-fixed-dim": "#bec6e0",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "secondary-container": "#6bff8f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "xs": "4px",
+                        "unit": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "label-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary/20">
+<!-- TopNavBar -->
+<nav class="bg-white/90 backdrop-blur-md dark:bg-slate-900/90 fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="max-w-7xl mx-auto flex justify-between items-center h-20 px-8">
+<div class="flex items-center gap-2">
+<span class="text-xl font-extrabold text-slate-900 dark:text-white tracking-tighter">FinanzaSync</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<!-- Assume "Servicios" is active based on generic landing page nature -->
+<a class="font-inter text-sm font-medium tracking-wide text-green-600 dark:text-green-400 font-bold border-b-2 border-green-600 active:scale-95 transition-transform duration-150" href="#servicios">Servicios</a>
+<a class="font-inter text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:opacity-80 transition-all duration-200 active:scale-95 transition-transform duration-150" href="#soluciones">Soluciones</a>
+<a class="font-inter text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:opacity-80 transition-all duration-200 active:scale-95 transition-transform duration-150" href="#precios">Precios</a>
+<a class="font-inter text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:opacity-80 transition-all duration-200 active:scale-95 transition-transform duration-150" href="#testimonios">Testimonios</a>
+</div>
+<div class="hidden md:flex items-center">
+<button class="bg-secondary text-on-secondary font-label-md px-6 py-3 rounded hover:opacity-90 transition-opacity active:scale-95 shadow-[0_4px_12px_rgba(15,23,42,0.05)]">
+                    Empezar Ahora
+                </button>
+</div>
+<button class="md:hidden text-slate-900 p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 lg:pt-32 lg:pb-40 overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-[24px] relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-surface-container-high text-on-surface px-4 py-2 rounded-full font-label-md">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        Atención personalizada | 100% online
+                    </div>
+<h1 class="font-h1 text-h1 text-on-surface">
+                        Contabilidad online <span class="text-secondary">simple</span> para monotributistas y pymes
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Olvidate de impuestos, trámites y errores. Nos encargamos de todo por vos para que te enfoques en hacer crecer tu negocio.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-secondary text-on-secondary font-label-md text-label-md px-8 py-4 rounded shadow-sm hover:shadow-[0_4px_12px_rgba(15,23,42,0.05)] transition-all">
+                            Agendar consulta gratis
+                        </button>
+<button class="bg-surface-container-lowest text-primary border border-outline font-label-md text-label-md px-8 py-4 rounded hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                            Hablar por WhatsApp
+                        </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute inset-0 bg-surface-variant rounded-xl transform rotate-3 scale-105 opacity-50"></div>
+<img alt="Profesional trabajando en laptop con gráficos financieros en un ambiente luminoso y moderno" class="relative rounded-xl shadow-[0_12px_24px_rgba(15,23,42,0.1)] w-full h-auto object-cover aspect-[4/3] border border-outline-variant" data-alt="Profesional trabajando en laptop con gráficos financieros en un ambiente luminoso y moderno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB09-vHo2lP-M894SaecdnkywvXhoGJoJormfjXwp_t7OLIk6csn-StQt_taKyBaGyPmsAheAl3ACWGlc42_Zfu-iRVI2ziG9FrSfDA-3a6jwvDztd-iSUXP2TmSSHqX5pGv44IpRkjLsjQ3LqQ5zbxAteP__i5wnSnyWknBskEecV1t7yUGyVtLTB3fIPzkx0et2kGD0CYto7FRfmk4L5e7-O_bPEqhQ0HEvmyykjYxcspjO8TmHQOFuhJcuVf9zUSjen5qylJ6hg"/>
+</div>
+</div>
+</section>
+<!-- Problema Section -->
+<section class="py-24 bg-surface-container-lowest border-y border-outline-variant/30">
+<div class="max-w-[1280px] mx-auto px-[24px]">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="font-h2 text-h2 text-on-surface mb-6">¿Sentís que los impuestos te frenan?</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="p-8 rounded-xl bg-surface border border-outline-variant/50 flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-3xl" data-icon="help_center">help_center</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Dudas constantes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">"¿Estaré pagando lo que corresponde o me falta algo?"</p>
+</div>
+<div class="p-8 rounded-xl bg-surface border border-outline-variant/50 flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-3xl" data-icon="timer">timer</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Pérdida de tiempo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">"Pierdo horas intentando entender la página de AFIP."</p>
+</div>
+<div class="p-8 rounded-xl bg-surface border border-outline-variant/50 flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-3xl" data-icon="warning">warning</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Miedo a errores</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">"Me aterra que me llegue una multa por hacer algo mal."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solución & Servicios (Bento Grid) -->
+<section class="py-24 bg-background" id="servicios">
+<div class="max-w-[1280px] mx-auto px-[24px]">
+<div class="mb-16">
+<h2 class="font-h2 text-h2 text-on-surface mb-4">Nosotros lo hacemos simple</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Gestión completa, asesoramiento experto y todo 100% online para que tengas el control sin el estrés.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Servicio 1 -->
+<div class="md:col-span-1 rounded-xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm hover:shadow-[0_4px_12px_rgba(15,23,42,0.05)] transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded mb-6 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Monotributo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Gestión de pagos sin preocupaciones. Categorización y facturación simplificada.</p>
+</div>
+<!-- Servicio 2 -->
+<div class="md:col-span-2 rounded-xl bg-primary-container text-on-primary-container border border-primary-fixed-dim p-8 shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-12 h-12 bg-primary-fixed text-on-primary-fixed rounded mb-6 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="store">store</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-primary mb-2">Responsables Inscriptos</h3>
+<p class="font-body-md text-body-md text-on-primary-container max-w-md">Todo en regla sin errores. Liquidación de IVA, Ganancias y declaraciones juradas con precisión milimétrica.</p>
+</div>
+</div>
+<!-- Servicio 3 -->
+<div class="md:col-span-3 rounded-xl bg-surface-container-low border border-outline-variant p-8 shadow-sm flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1 space-y-4">
+<div class="w-12 h-12 bg-surface-dim text-on-surface rounded flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Empresas &amp; Sociedades</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Orden y control total. Balances, liquidación de sueldos y planificación fiscal estratégica para el crecimiento corporativo.</p>
+</div>
+<div class="w-full md:w-1/3 aspect-video bg-surface-variant rounded border border-outline-variant/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant" data-icon="monitoring">monitoring</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Precios -->
+<section class="py-24 bg-surface-container-lowest border-y border-outline-variant/30" id="precios">
+<div class="max-w-[1280px] mx-auto px-[24px]">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-on-surface mb-4">Planes claros, sin sorpresas</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Plan 1 -->
+<div class="border border-outline-variant rounded-xl p-8 bg-surface text-center">
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Monotributo</h3>
+<div class="text-3xl font-bold text-on-surface mb-6">Desde $XX<span class="text-sm font-normal text-on-surface-variant">/mes</span></div>
+<ul class="text-left space-y-4 mb-8 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Recategorizaciones</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Declaraciones de IIBB</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Soporte vía email</li>
+</ul>
+<button class="w-full border border-primary text-primary font-label-md text-label-md py-3 rounded hover:bg-surface-container-low transition-colors">
+                            Consultar mi caso
+                        </button>
+</div>
+<!-- Plan 2 -->
+<div class="border-2 border-secondary rounded-xl p-8 bg-surface-container-lowest text-center relative shadow-[0_4px_12px_rgba(15,23,42,0.05)]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-bold tracking-wide">
+                            MÁS ELEGIDO
+                        </div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Responsables</h3>
+<div class="text-3xl font-bold text-on-surface mb-6">Desde $XX<span class="text-sm font-normal text-on-surface-variant">/mes</span></div>
+<ul class="text-left space-y-4 mb-8 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Liquidación mensual (IVA)</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Ganancias</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Soporte prioritario WhatsApp</li>
+</ul>
+<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-3 rounded hover:opacity-90 transition-opacity">
+                            Consultar mi caso
+                        </button>
+</div>
+<!-- Plan 3 -->
+<div class="border border-outline-variant rounded-xl p-8 bg-surface text-center">
+<h3 class="font-h3 text-h3 text-on-surface mb-2">Empresas</h3>
+<div class="text-3xl font-bold text-on-surface mb-6">Personalizado</div>
+<ul class="text-left space-y-4 mb-8 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Balances anuales</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Liquidación de sueldos</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Planificación fiscal</li>
+</ul>
+<button class="w-full border border-primary text-primary font-label-md text-label-md py-3 rounded hover:bg-surface-container-low transition-colors">
+                            Consultar mi caso
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-24 bg-primary-container text-on-primary-container text-center px-[24px]">
+<div class="max-w-3xl mx-auto space-y-8">
+<h2 class="font-h2 text-h2 text-on-primary">Empezá hoy sin complicaciones</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container">Dejá la contabilidad en manos expertas y dedicá tu tiempo a lo que realmente importa.</p>
+<button class="bg-secondary text-on-secondary font-label-md text-label-md px-8 py-4 rounded shadow-sm hover:opacity-90 transition-opacity">
+                    Agendar consulta
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<div class="text-lg font-bold text-slate-900 dark:text-white">FinanzaSync</div>
+<p class="font-inter text-sm text-slate-500 dark:text-slate-400">© 2024 FinanzaSync Contabilidad Digital. Todos los derechos reservados.</p>
+</div>
+<div class="flex flex-wrap gap-6 md:justify-end">
+<a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 underline decoration-green-500/30 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity" href="#">Privacidad</a>
+<a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 underline decoration-green-500/30 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity" href="#">Términos de Servicio</a>
+<a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 underline decoration-green-500/30 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity" href="#">Contacto</a>
+<a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 underline decoration-green-500/30 underline-offset-4 opacity-100 hover:opacity-80 transition-opacity" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+<!-- FAB WhatsApp -->
+<a class="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-[0_12px_24px_rgba(15,23,42,0.2)] hover:scale-105 transition-transform z-50 flex items-center justify-center" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="forum">forum</span>
+</a>
+</body></html>
